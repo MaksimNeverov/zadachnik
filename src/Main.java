@@ -170,37 +170,108 @@ public class Main {
 //Выведите в консоль сумму всех элементов этого массива.
 
 
+//
+//        int[][][] arr = {
+//	{
+//		{1, 2, 3, 4, 5},
+//		{1, 2, 3, 4, 5},
+//		{1, 2, 3, 4, 5},
+//	},
+//	{
+//		{1, 2, 3, 4, 5},
+//		{1, 2, 3, 4, 5},
+//		{1, 2, 3, 4, 5},
+//	},
+//	{
+//		{1, 2, 3, 4, 5},
+//		{1, 2, 3, 4, 5},
+//		{1, 2, 3, 4, 5},
+//	},
+//};
+//
+//        int sum = 0;
+//        for (int[][] matrix : arr) {
+//            for (int[] row : matrix) {
+//                for (int num : row) {
+//                    sum += num;
+//                }
+//            }
+//        }
+//
+//        System.out.println("Сумма элементов массива: " + sum);
 
-        int[][][] arr = {
-	{
-		{1, 2, 3, 4, 5},
-		{1, 2, 3, 4, 5},
-		{1, 2, 3, 4, 5},
-	},
-	{
-		{1, 2, 3, 4, 5},
-		{1, 2, 3, 4, 5},
-		{1, 2, 3, 4, 5},
-	},
-	{
-		{1, 2, 3, 4, 5},
-		{1, 2, 3, 4, 5},
-		{1, 2, 3, 4, 5},
-	},
-};
 
-        int sum = 0;
-        for (int[][] matrix : arr) {
-            for (int[] row : matrix) {
-                for (int num : row) {
-                    sum += num;
-                }
+//		Дано некоторое целое число://
+//      int num = 12345;
+//      Проверьте, что цифры этого числа расположены по возрастанию.
+//        int num = 12345;
+//        boolean isAscending = isDigitsAscending(num);
+//        if (isAscending) {
+//            System.out.println("Цифры числа расположены по возрастанию.");
+//        } else {
+//            System.out.println("Цифры числа не расположены по возрастанию.");
+//        }
+//    }
+//
+//    public static boolean isDigitsAscending(int num) {
+//        String numStr = String.valueOf(num);
+//        for (int i = 1; i < numStr.length(); i++) {
+//            if (numStr.charAt(i) <= numStr.charAt(i - 1)) {
+//                return false;
+//            }
+//        }
+//        return true;
+//        ===============================================================================================================
+//        Дан некоторый массив://
+//        int[] arr = {123, 456, 789};
+//        Получите массив первых цифр входящих в первый массив чисел://
+//        byte[] {1, 4, 7};
+
+//        int[] arr = {123, 456, 789};
+//        int[] arr1 = new int[arr.length];
+//
+//           for (int i = 0; i < arr.length; i++) {
+//               int firstDigit = String.valueOf(arr[i]).charAt(0) - '0';
+//               arr1[i] = firstDigit;
+//               }
+//               System.out.println(Arrays.toString(arr1));
+//        ==================================================================================================================
+//         Сформируйте с помощью циклов следующий массив:
+//
+//        char[] {
+        //	{'x', 'x', 'x'},
+        //	{'x', 'x', 'x'},
+        //	{'x', 'x', 'x'},
+//           }
+
+
+
+
+        char[][] array = new char[3][3];
+
+// Заполняем массив символом 'x'
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                array[i][j] = 'x';
             }
         }
 
-        System.out.println("Сумма элементов массива: " + sum);
-    }
-}
+// Выводим массив на экран
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                System.out.print(array[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+            }
+        }
+
+
+
+
+
+
 
 
 
