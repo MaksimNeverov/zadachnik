@@ -1,6 +1,9 @@
 import java.util.Arrays;
+import java.util.LinkedHashSet;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
 
@@ -199,7 +202,7 @@ public class Main {
 //        }
 //
 //        System.out.println("Сумма элементов массива: " + sum);
-
+//=======================================================================================================================
 
 //		Дано некоторое целое число://
 //      int num = 12345;
@@ -245,27 +248,230 @@ public class Main {
 //           }
 
 
+//        char[][] array = new char[3][3];
+//
+//// Заполняем массив символом 'x'
+//        for (int i = 0; i < array.length; i++) {
+//            for (int j = 0; j < array[i].length; j++) {
+//                array[i][j] = 'x';
+//            }
+//        }
+//
+//// Выводим массив на экран
+//        for (int i = 0; i < array.length; i++) {
+//            for (int j = 0; j < array[i].length; j++) {
+//                System.out.print(array[i][j] + " ");
+//            }
+//            System.out.println();
+//        }
+
+        //========================================================================================================================
 
 
-        char[][] array = new char[3][3];
+//        int[][] array = {
+//                {1, 2, 3},
+//                {4, 5, 6},
+//                {7, 8, 9},
+//                               };
+//
+//
+//        System.out.println("Главная диагональ:");
+//        for (int i = 0; i < array.length; i++) {
+//            for (int j = 0; j < array[i].length; j++) {
+//                if (i + j == array.length - 1) {
+//                    System.out.print(array[i][j] + " ");
+//                }
+//            }
+//        }
+//        System.out.println();
+//
+//// Вывод побочной диагонали
+//        System.out.println("Побочная диагональ:");
+//        for (int i = array.length - 1; i >= 0; i--) {
+//            for (int j = 0; j < array.length; j++) {
+//                         if (i == j)
+//                    System.out.print(array[i][j] + " ");
+//                }
+//            }
 
-// Заполняем массив символом 'x'
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                array[i][j] = 'x';
-            }
-        }
 
-// Выводим массив на экран
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                System.out.print(array[i][j] + " ");
-            }
-            System.out.println();
-        }
+//  Уровень 5.5 задачника Java
 
-            }
-        }
+//  Попросите у пользователя ввести через консоль целое число из промежутка от 1 до 10. Если будет введено что-то другое, то попросите пользователя ввести число еще раз.
+
+
+//        Scanner scanner = new Scanner(System.in);
+//        int number;
+//
+//        do {
+//            System.out.println("Введите целое число от 1 до 10:");
+//            while (!scanner.hasNextInt()) {
+//                System.out.println("Это не целое число. Попробуйте еще раз:");
+//                scanner.next(); // Перемещаем курсор на следующую позицию ввода
+//            }
+//            number = scanner.nextInt();
+//
+//            if (number < 1 || number > 10) {
+//                System.out.println("Число должно быть от 1 до 10. Попробуйте еще раз.");
+//            }
+//        } while (number < 1 || number > 10);
+//
+//        System.out.println("Вы ввели число: " + number);
+
+//===========================================================================================================================
+//        Сформируйте с помощью циклов следующий массив:
+
+//int[] {
+//            {1, 2, 3},
+//            {1, 2, 3},
+//            {1, 2, 3},
+//            {1, 2, 3},
+//            {1, 2, 3},
+        //       }
+
+//        int[][] array = new int[5][3];
+//
+//// Заполняем массив значениями от 1 до 3 в каждой строке
+//        for (int i = 0; i < array.length; i++) {
+//            for (int j = 0; j < 3; j++) {
+//                array[i][j] = j + 1;
+//               }
+//        }
+//
+// //Выводим массив на экран
+//        for (int i = 0; i < array.length; i++) {
+//            for (int j = 0; j < 3; j++) {
+//                System.out.print(array[i][j] + " ");
+//            }
+//            System.out.println();
+//       }
+
+//=======================================================================================================================
+//       Дана некоторая строка:
+//      "abcdeabc"
+//       Очистите ее от дублей символов:
+//       "abcde"
+
+//        String str = "abcdeabc";
+//
+//        Pattern pattern = Pattern.compile("abcde");
+//        Matcher matcher = pattern.matcher(str);
+//        String result = "";
+//
+//        if (matcher.find()) {
+//            result = matcher.group();
+//        }
+//
+//        System.out.println(result);
+
+//        String str = "abcdeabc";
+//
+//        // Преобразуем строку в набор символов (LinkedHashSet сохраняет порядок)
+//        LinkedHashSet<Character> set = new LinkedHashSet<>();
+//        for (int i = 0; i < str.length(); i++) {
+//            set.add(str.charAt(i));
+//        }
+//
+//        // Формируем строку из набора символов
+//        StringBuilder result = new StringBuilder();
+//        for (char c : set) {
+//            result.append(c);
+//        }
+//
+//        // Выводим итоговую строку
+//        System.out.println("Очищенная от дублей строка: " + result.toString());
+//=======================================================================================================================
+
+//    Дана некоторая строка:
+//   "abcde"
+//    Переведите в верхний регистр все нечетные буквы этой строки. В нашем случае должно получится следующее:
+//   "AbCdE"
+
+//        String str = "abcde";
+//        StringBuilder result = new StringBuilder();
+//
+//        for (int i = 0; i < str.length(); i++)
+//            if ((i + 1) % 2 != 0) {
+//                result.append(Character.toUpperCase(str.charAt(i)));
+//            } else {
+//                result.append(str.charAt(i));
+//
+//    }
+//        System.out.println(result);
+//========================================================================================================================
+        // Уровень 5.6 задачника Java
+        //Напишите программу, которая будет находить корни квадратного уравнения. Для этого спросите у пользователя три числа, которые будут коэффициентами уравнения.
+
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.println("Введите коэффициенты квадратного уравнения ax^2 + bx + c = 0:");
+//        System.out.print("Введите коэффициент a: ");
+//        double a = scanner.nextDouble();
+//        System.out.print("Введите коэффициент b: ");
+//        double b = scanner.nextDouble();
+//        System.out.print("Введите коэффициент c: ");
+//        double c = scanner.nextDouble();
+//
+//        double[] roots = findRoots(a, b, c);
+//
+//        System.out.println("Корни уравнения:");
+//        for (double root : roots) {
+//            System.out.println(root);
+//        }
+//    }
+//
+//    public static double[] findRoots(double a, double b, double c) {
+//        double discriminant = b * b - 4 * a * c;
+//        double[] roots;
+//
+//        if (discriminant > 0) {
+//            double root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+//            double root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+//            roots = new double[]{root1, root2};
+//        } else if (discriminant == 0) {
+//            double root = -b / (2 * a);
+//            roots = new double[]{root};
+//        } else {
+//            roots = new double[]{Double.NaN, Double.NaN}; // корни являются комплексными числами
+//        }
+//
+//        return roots;
+
+//=========================================================================================================================
+
+ //       Сформируйте с помощью циклов следующий массив:
+//           int[] {
+//            {1, 2, 3},
+//            {4, 5, 6},
+//            {7, 8, 9},
+//        }
+
+//        int[][] array = new int[3][3];
+//        int count = 1;
+//
+//        // Заполнение массива
+//        for (int i = 0; i < 3; i++) {
+//            for (int j = 0; j < 3; j++) {
+//                array[i][j] = count++;
+//            }
+//        }
+//
+//        // Вывод массива
+//        for (int i = 0; i < 3; i++) {
+//            for (int j = 0; j < 3; j++) {
+//                System.out.print(array[i][j] + " ");
+//            }
+//            System.out.println();
+//        }
+    }
+}
+
+
+
+
+
+
+
 
 
 
