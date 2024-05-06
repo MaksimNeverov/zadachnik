@@ -1,7 +1,4 @@
-import java.util.Arrays;
-import java.util.LinkedHashSet;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -439,7 +436,7 @@ public class Main {
 
 //=========================================================================================================================
 
- //       Сформируйте с помощью циклов следующий массив:
+        //       Сформируйте с помощью циклов следующий массив:
 //           int[] {
 //            {1, 2, 3},
 //            {4, 5, 6},
@@ -463,8 +460,134 @@ public class Main {
 //            }
 //            System.out.println();
 //        }
+//=====================================================================================================================
+//      Даны два числа:
+//
+//     int num1 = 12345;
+//     int num2 = 45678;
+//     Выведите в консоль цифры, которые есть и в одном, и в другом числе.
+
+//        int num1 = 12345;
+//        int num2 = 45678;
+//        int num3 = 0;
+//        String str = "";
+//
+//        while (num1 > 0) {
+//            int digit1 = num1 % 10;
+//            int tempNum2 = num2; // Создаем временную копию num2 для каждой итерации num1
+//            while (tempNum2 > 0) {
+//                int digit2 = tempNum2 % 10;
+//                if (digit2 == digit1) {
+//                    str += digit2;
+//                }
+//                tempNum2 = tempNum2 / 10;
+//            }
+//            num1 = num1 / 10;
+//        }
+//        num3 = Integer.parseInt(str);
+//        System.out.println(num3);
+
+//        ===============================================================================================================
+//
+// Выведите в консоль все числа в промежутке от 10 до 1000, сумма первой и второй цифры которых равна пяти.
+//        for (int i = 10; i <= 1000; i++) {
+//            int firstDigit = Character.getNumericValue(String.valueOf(i).charAt(0));
+//            int secondDigit = Character.getNumericValue(String.valueOf(i).charAt(1));
+//            if (firstDigit + secondDigit == 5) {
+//                System.out.println(i);
+//            }
+//        }
+//        ==============================================================================================================
+
+
+//        Дан массив:
+//
+//        {
+//            {1, 2, 3},
+//            {4, 5, 6},
+//            {7, 8, 9},
+//        }
+//        Слейте элементы этого массива в один одномерный массив:
+//
+//        {1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+//        int[][] arr = {
+//                {1, 2, 3},
+//                {4, 5, 6},
+//                {7, 8, 9},
+//        };
+//
+//        int size = 0;
+//        for (int[] matrix : arr) {
+//            for (int row : matrix)
+//                size++;
+//        }
+//
+//
+//        int[] arr2 = new int[size];
+//        for (int[] matrix : arr) {
+//            for (int row : matrix) {
+//                arr2[row - 1] = row;
+//            }
+//        }
+//        System.out.println(Arrays.toString(arr2));
+
+
+//        ==============================================================================================================
+//        Даны две строки:
+//
+//        String str1 = "12345";
+//        String str2 = "45678";
+//        Получите символы, которые есть и в одной, и в другой строке:
+//
+//        "45"
+
+
+//        String str1 = "12345";
+//        String str2 = "45678";
+//
+//        // Создаем множества для символов из каждой строки
+//        Set<Character> set1 = new HashSet<>();
+//        Set<Character> set2 = new HashSet<>();
+//
+//        // Заполняем множества символами из строк
+//        for (char c : str1.toCharArray()) {
+//            set1.add(c);
+//        }
+//        for (char c : str2.toCharArray()) {
+//            set2.add(c);
+//        }
+//
+//        // Находим пересечение множеств
+//        set1.retainAll(set2);
+//
+//        // Преобразуем результат в строку
+//        StringBuilder result = new StringBuilder();
+//        for (char c : set1) {
+//            result.append(c);
+//        }
+//
+//        System.out.println(result.toString());
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
