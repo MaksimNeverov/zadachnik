@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 public class Main {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         //   ==============================================================================================================
 
@@ -823,9 +823,137 @@ public class Main {
 //
 //        // Преобразование массива символов обратно в число
 //        return Integer.parseInt(new String(chars));
+//        =============================================================================================================
+
+// Колькулятор
+
+//
+//        Scanner scanner = new Scanner(System.in);
+//        double result = 0;
+//
+//        System.out.print("Введите первое число: ");
+//        double num1 = scanner.nextDouble();
+//        System.out.print("Введите второе число: ");
+//        double num2 = scanner.nextDouble();
+//        System.out.println("Выберите тип математической операции из списка:");
+//        System.out.println("1) сложение +");
+//        System.out.println("2) вычитание -");
+//        System.out.println("3) умножение *");
+//        System.out.println("4) деление /");
+//
+//        int choice = scanner.nextInt();
+//
+//        switch (choice) {
+//            case 1:
+//                System.out.println("Вы выбрали сложение");
+//                result = num1 + num2;
+//                break;
+//            case 2:
+//                System.out.println("Вы выбрали вычитание");
+//                result = num1 - num2;
+//                break;
+//            case 3:
+//                System.out.println("Вы выбрали умножение");
+//                result = num1 * num2;
+//                break;
+//            case 4:
+//                System.out.println("Вы выбрали деление");
+//                if (num1 == 0) {
+//                    System.out.println("Выберете другое значение - на ноль делить нельзя");
+//                    num1 = scanner.nextDouble();
+//                    result = num1 / num2;
+//                } else if (num2 == 0) {
+//                    System.out.println("Выберете другое значение - на ноль делить нельзя");
+//                    num2 = scanner.nextDouble();
+//                    result = num1 / num2;
+//
+//                } else
+//                result = num1 / num2;
+//                break;
+//            default:
+//                System.out.println("Вы ввели неправильное значение");
+//                return; // Exiting the program if the choice is invalid
+//        }
+//
+//        // Printing the result after the calculation
+//        System.out.println("Результат: " + result);
+
+
+  //===============================================================================================================================
+
+        //        Спросите у пользователя число. Выведите в консоль таблицу умножения на это число. Ниже приведен пример для двойки:
+//
+//        1 * 2 = 2
+//        2 * 2 = 3
+//        3 * 2 = 6
+//        4 * 2 = 8
+//        5 * 2 = 10
+//        6 * 2 = 12
+//        7 * 2 = 14
+//        8 * 2 = 16
+//        9 * 2 = 18
+
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.print("Введите число: ");
+//        int number = scanner.nextInt();
+//
+//        System.out.println("Таблица умножения для " + number + ":");
+//
+//        for (int i = 1; i <= 10; i++) {
+//            System.out.println(i + " * " + number + " = " + (i * number));
+//        }
+        //=================================================================================================================
+
+
+
+        // Дана строка:
+        //
+        //"""
+        //	text1
+        //	text2
+        //	text3
+        //	text4
+        //	text5
+        //"""
+        //Разбейте эту строку в массив так, чтобы каждая непустая линия текста стала отдельным элементом массива:
+        //
+        //[
+        //	"text1",
+        //	"text2",
+        //	"text3",
+        //	"text4",
+        //	"text5",
+        //]
+
+//        String text = """
+//            text1
+//            text2
+//            text3
+//            text4
+//            text5
+//            """;
+//
+//        // Разбиваем строку на массив строк, удаляя пустые элементы
+//        String[] lines = text.split("\\s*\\n\\s*");
+//
+//        // Выводим результат
+//        System.out.println("[");
+//        for (String line : lines) {
+//            System.out.println("\t\"" + line + "\",");
+//        }
+//        System.out.println("]");
     }
 }
 
+
+
+
+
+
+
+
+git
 
 
 
