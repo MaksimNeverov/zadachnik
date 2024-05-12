@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Zadachnik6 {
 
     public static void main(String[] args) {
-//        УРОВЕНЬ 6.1
+//        Нн
 
 //        Выведите текущую дату в формате год-месяц-день.
 
